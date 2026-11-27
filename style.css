@@ -1,0 +1,298 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f1f3f6;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #172554;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #facc15;
+    letter-spacing: 3px;
+    animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        letter-spacing: 2px;
+    }
+    to {
+        letter-spacing: 6px;
+    }
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* Moving message */
+.moving {
+    background: #facc15;
+    color: #172554;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Home background */
+.hero {
+    height: 450px;
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1600")
+    center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    color: #facc15;
+}
+
+.hero-text p {
+    margin: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #facc15;
+    color: #172554;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Offers */
+.offers {
+    text-align: center;
+    padding: 35px;
+}
+
+.offers h2, .products h2 {
+    margin-bottom: 25px;
+    color: #172554;
+}
+
+.offer-box {
+    display: inline-block;
+    background: #172554;
+    color: white;
+    padding: 25px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.offer-box h3 {
+    color: #facc15;
+    margin-bottom: 10px;
+}
+
+/* Products */
+.products {
+    padding: 35px 5%;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    width: 250px;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #bbb;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+}
+
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product h3 {
+    color: #172554;
+    margin: 10px;
+}
+
+.product p {
+    margin: 10px;
+}
+
+button {
+    background: #172554;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #eab308;
+    color: black;
+}
+
+/* Page title */
+.page-title {
+    text-align: center;
+    padding: 35px;
+    color: #172554;
+}
+
+/* About */
+.about {
+    background: white;
+    margin: 35px auto;
+    padding: 35px;
+    max-width: 850px;
+    line-height: 1.8;
+    border-radius: 10px;
+}
+
+.about h1, .about h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.about img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.about ul {
+    padding-left: 30px;
+}
+
+/* Login */
+.login-box {
+    background: white;
+    width: 350px;
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px #aaa;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #172554;
+    margin-bottom: 25px;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 15px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 22px;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .hero {
+        height: 350px;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .offer-box {
+        width: 90%;
+    }
+
+    .product {
+        width: 90%;
+    }
+      }
+  
